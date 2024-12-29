@@ -1,4 +1,7 @@
 import 'package:calculator_app/ui/rows/row1.dart';
+import 'package:calculator_app/ui/rows/row2.dart';
+import 'package:calculator_app/ui/rows/row3.dart';
+import 'package:calculator_app/ui/rows/row4.dart';
 import 'package:flutter/material.dart';
 
 class Buttons extends StatelessWidget {
@@ -6,54 +9,24 @@ class Buttons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // ROW - 1
-        const Row1(),
-
-        // ROW - 2
-        Row(
-          children: [
-            // 4
-            Expanded(
-              child: ElevatedButton(
-                onPressed: () {}, 
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(0, 102.7), // Height only; width is controlled by Expanded
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0), 
-                  ),
-                  padding: const EdgeInsets.all(16), 
-                  backgroundColor: Colors.black87,
-                ),
-                child: const Text(
-                  "4",
-                  style: TextStyle(fontSize: 24, color: Colors.white), 
-                ), 
-              ),
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.6, // 60% of the screen height
+      child: const Column(
+        children: [
+          Expanded(child: Row1()), // Fully fills 25% of the container
+          Expanded(child: Row2()), // Fully fills 25% of the container
+          Expanded(child: Row3()), // Fully fills 25% of the container
+          Expanded(child: Row4()), // Fully fills 25% of the container
+          Divider(color: Colors.white, height: 1), // 1-pixel divider
+          SizedBox(
+            height: 100,
+            child: Align(
+              alignment: Alignment.center,
+              child: Text("Calculate the result", style: TextStyle(color: Colors.white, fontSize: 30)),
             ),
-
-            // 5
-            Expanded(
-              child: ElevatedButton(
-                onPressed: () {}, 
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(0, 102.7), // Height only; width is controlled by Expanded
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0), 
-                  ),
-                  padding: const EdgeInsets.all(16), 
-                  backgroundColor: Colors.black87,
-                ),
-                child: const Text(
-                  "5",
-                  style: TextStyle(fontSize: 24, color: Colors.white), 
-                ), 
-              ),
-            ),
-          ],
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

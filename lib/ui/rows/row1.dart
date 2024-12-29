@@ -11,11 +11,11 @@ class Row1 extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {}, 
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(0, 102.7), // Height only; width is controlled by Expanded
+                minimumSize: const Size(0, 200), // Height only; width is controlled by Expanded
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0), 
                 ),
-                padding: const EdgeInsets.all(16), 
+                padding: EdgeInsets.zero,
                 backgroundColor: Colors.black87,
               ),
               child: const Text(
@@ -28,11 +28,11 @@ class Row1 extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {}, 
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(0, 102.7),
+                minimumSize: const Size(0, 200),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0), 
                 ),
-                padding: const EdgeInsets.all(16), 
+                padding: EdgeInsets.zero, 
                 backgroundColor: Colors.black87,
               ),
               child: const Text(
@@ -45,11 +45,11 @@ class Row1 extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {}, 
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(0, 102.7),
+                minimumSize: const Size(0, 200),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0), 
                 ),
-                padding: const EdgeInsets.all(16), 
+                padding: EdgeInsets.zero, 
                 backgroundColor: Colors.black87,
               ),
               child: const Text(
@@ -62,11 +62,11 @@ class Row1 extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {}, 
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(0, 102.7),
+                minimumSize: const Size(0, 200),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0), 
                 ),
-                padding: const EdgeInsets.all(16), 
+                padding: EdgeInsets.zero, 
                 backgroundColor: const Color.fromARGB(255, 72, 161, 9),
               ),
               child: const Icon(Icons.add, color: Colors.white, size: 50,)

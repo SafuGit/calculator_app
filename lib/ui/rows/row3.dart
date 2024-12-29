@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Row2 extends StatelessWidget {
-  const Row2({super.key});
+class Row3 extends StatelessWidget {
+  const Row3({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // 4
+        // 7
         Expanded(
           child: ElevatedButton(
             onPressed: () {}, 
@@ -20,13 +20,13 @@ class Row2 extends StatelessWidget {
               backgroundColor: Colors.black87,
             ),
             child: const Text(
-              "4",
+              "7",
               style: TextStyle(fontSize: 24, color: Colors.white), 
             ), 
           ),
         ),
 
-        // 5
+        // 8
         Expanded(
           child: ElevatedButton(
             onPressed: () {}, 
@@ -39,13 +39,13 @@ class Row2 extends StatelessWidget {
               backgroundColor: Colors.black87,
             ),
             child: const Text(
-              "5",
+              "8",
               style: TextStyle(fontSize: 24, color: Colors.white), 
             ), 
           ),
         ),
 
-        // 6
+        // 9
         Expanded(
           child: ElevatedButton(
             onPressed: () {}, 
@@ -58,7 +58,7 @@ class Row2 extends StatelessWidget {
               backgroundColor: Colors.black87,
             ),
             child: const Text(
-              "6",
+              "9",
               style: TextStyle(fontSize: 24, color: Colors.white), 
             ), 
           ),
@@ -73,9 +73,9 @@ class Row2 extends StatelessWidget {
                 borderRadius: BorderRadius.circular(0), 
               ),
               padding: const EdgeInsets.all(16), 
-              backgroundColor: const Color.fromARGB(255, 221, 45, 0),
+              backgroundColor: const Color.fromARGB(255, 10, 136, 194),
             ),
-            child: const Icon(Icons.remove, color: Colors.white, size: 50,)
+            child: const Text("X", style: TextStyle(color: Colors.white, fontSize: 40))
           ),
         ),
       ],

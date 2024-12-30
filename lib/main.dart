@@ -1,9 +1,15 @@
+import 'package:calculator_app/services/calc.dart';
 import 'package:calculator_app/ui/buttons.dart';
 import 'package:calculator_app/ui/display.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      child: const MyApp(),
+      create: (_) => CalculatorModel(),
+    ));
 }
 
 class MyApp extends StatelessWidget {
@@ -34,16 +40,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
+    final calculator = Provider.of<CalculatorModel>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,

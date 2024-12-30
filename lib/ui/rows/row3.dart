@@ -1,16 +1,19 @@
+import 'package:calculator_app/services/calc.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Row3 extends StatelessWidget {
   const Row3({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final calculator = Provider.of<CalculatorModel>(context);
     return Row(
       children: [
         // 7
         Expanded(
           child: ElevatedButton(
-            onPressed: () {}, 
+            onPressed: () => calculator.onInputPressed("7"), 
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(0, 200), // Height only; width is controlled by Expanded
               shape: RoundedRectangleBorder(
@@ -29,7 +32,7 @@ class Row3 extends StatelessWidget {
         // 8
         Expanded(
           child: ElevatedButton(
-            onPressed: () {}, 
+            onPressed: () => calculator.onInputPressed("8"), 
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(0, 200), // Height only; width is controlled by Expanded
               shape: RoundedRectangleBorder(
@@ -48,7 +51,7 @@ class Row3 extends StatelessWidget {
         // 9
         Expanded(
           child: ElevatedButton(
-            onPressed: () {}, 
+            onPressed: () => calculator.onInputPressed("9"), 
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(0, 200), // Height only; width is controlled by Expanded
               shape: RoundedRectangleBorder(
@@ -66,7 +69,7 @@ class Row3 extends StatelessWidget {
 
         Expanded(
           child: ElevatedButton(
-            onPressed: () {}, 
+            onPressed: () => calculator.onInputPressed("*"), 
             style: ElevatedButton.styleFrom(
               minimumSize: const Size(0, 200),
               shape: RoundedRectangleBorder(
